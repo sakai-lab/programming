@@ -11,7 +11,7 @@ q2
     なお文字列はコマンドライン引数から1つ指定するものとする
 
 q3
-    if文を用いずに
+    if.swichなどの条件文を用いずに
     「sakai」が入力されたら「tetsuya」
     「nakajima」が入力されたら「tatsuo」
     「washizaki」が入力されたら「hironori」
