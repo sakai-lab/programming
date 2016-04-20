@@ -1,0 +1,7 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=5E53F9AB
+eax=00000073 ebx=5E54C360 ecx=00000000 edx=61006DC0 esi=61006DC0 edi=00000001
+ebp=00000000 esp=0028CBE0 program=C:\Users\Rina\Documents\GitHub\programming\q1\rina\q3.exe, pid 5424, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+End of stack trace
