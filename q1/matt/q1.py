@@ -1,10 +1,10 @@
+import re
 def q1(string="I am an real sakai lab student"):
     """
     >>> q1()
-    'I Am An Real Sakai Lab Student'
+    'IAARSLS'
     """
-    import re
-    return " ".join(w.capitalize() for w in re.split(r"\s+", string))
+    return "".join(w[0].capitalize() for w in re.split(r"\s+", string))
 
 
 def q2(ip_input):
@@ -24,15 +24,7 @@ def q3(surname_input):
     >>> q3("sakai")
     'tetsuya'
     """
-    if surname_input == "sakai":
-        return "tetsuya"
-    elif surname_input == "nakajima":
-        return "tatsuo"
-    elif surname_input == "washizaki":
-        return "hironor"
-    else:
-        print "Unexpected Input"
-
-
-
-
+    return (surname_input
+            .replace("sakai","tetsuya")
+            .replace("nakajima","tatsuo")
+            .replace("washizaki","hironor"))
