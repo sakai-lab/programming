@@ -1,0 +1,38 @@
+<html>
+<head>
+  <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="content">
+    <h1>Question 3</h1>
+    <p>
+      if.swichなどの条件文を用いずに
+      「sakai」が入力されたら「tetsuya」
+      「nakajima」が入力されたら「tatsuo」
+      「washizaki」が入力されたら「hironori」
+      を出力するプログラムを書け
+    </p>
+    <label for="input">input</label>
+    <input id="input" type="text"/>
+    <label for="answer">answer</label>
+    <textarea id="answer">
+    var input = $("#input").val();
+    var obj = {
+      "sakai": "tetsuya",
+      "nakajima": "tatsuo",
+      "washizaki": "hironori"
+    };
+    alert("answer is: " + obj[input]);
+    </textarea>
+    <button id="exec">実行</button>
+  </div>
+  <script>
+    $("#exec").on('click',function(){
+      var sc = "<script>" + $("#answer").val() +"<\/script>";
+      $('body').append(sc);
+    })
+  </script>
+</body>
+</html>

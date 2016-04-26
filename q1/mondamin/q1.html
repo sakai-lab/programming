@@ -1,0 +1,32 @@
+<html>
+<head>
+  <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="content">
+    <h1>Question 1</h1>
+    <p>"I am real sakai lab student"
+      の各単語の頭文字をつなげて大文字にして出力するプログラムを書け
+
+      文章を文字列型で定義して始めること</p>
+    <textarea id="answer">
+    var answer = "";
+    var s = "I am real sakai lab student";
+    words = s.split(" ");
+    for(var i=0; i < words.length; i++) {
+      answer = answer + words[i].charAt(0);
+    }
+    alert("answer is: " + answer.toUpperCase());
+    </textarea>
+    <button id="exec">実行</button>
+  </div>
+  <script>
+    $("#exec").on('click',function(){
+      var sc = "<script>" + $("#answer").val() +"<\/script>";
+      $('body').append(sc);
+    })
+  </script>
+</body>
+</html>
