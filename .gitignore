@@ -1,0 +1,7 @@
+.DS_Store
+*.exe
+*.class
+*.swp
+__pycache__/
+*.py[cod]
+*$py.class

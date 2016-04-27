@@ -1,0 +1,42 @@
+<html>
+<head>
+  <script type="text/javascript"
+ src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="content">
+    <h1>Question 2</h1>
+    <p>
+      入力された文字列(.と数字の連続)が
+      IPv4で定義された範囲のIPアドレス(***.***.***.***)
+      になりえるかどうか判定するプログラムを書け
+    </p>
+    <label for="input">input</label>
+    <input id="input" type="text"/>
+    <label for="answer">answer</label>
+    <textarea id="answer">
+var input = $('#input').val();
+var answer = "IP Adress";
+var split_dot = input.split(".");
+if(split_dot.length !== 4) {
+  answer = "not IP Adress";
+}
+for(i = 0; i < 4; i++) {
+  if(split_dot[i] === "" || split_dot[i] < 0 || split_dot[i] > 255) {
+    answer = "not IP Adress";
+    break;
+  }
+}
+alert("input is " + answer);
+    </textarea>
+    <button id="exec">実行</button>
+  </div>
+  <script>
+    $("#exec").on('click',function(){
+      var sc = "<script>" + $("#answer").val() +"<\/script>";
+      $('body').append(sc);
+    })
+  </script>
+</body>
+</html>
