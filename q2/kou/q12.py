@@ -16,10 +16,12 @@ for w in member.keys():
     print(w)
 
 #for q2
+def BMI(m):
+    return m["weight"]/((m["height"]/100)**2)
+
 print("BMI calculation: name? :",end="")
 name=input()
 if name in member:
-    ans=member[name]["weight"]/((member[name]["height"]/100)**2)
-    print(ans)
+    print(BMI(member[name]))
 else:
     print("No data")
