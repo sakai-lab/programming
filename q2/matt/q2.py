@@ -10,7 +10,7 @@ def read_data():
 
     data = []
     with open("../data.txt") as f:
-        data = [line.strip().split(",") for line in f.readlines()]
+        data = (line.strip().split(",") for line in f.readlines())
     return {name:{"weight":float(weight), "height":float(height)}
             for name, height, weight in data}
 
