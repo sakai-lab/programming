@@ -17,7 +17,7 @@ def read_data():
 def get_bmi(name):
     """
     >>> bmi = get_bmi("sato")
-    >>> abs(bmi - 0.002224743) < 1E-3
+    >>> abs(bmi - 22.348246167) < 1E-5
     True
     """
     data = read_data()
@@ -25,8 +25,8 @@ def get_bmi(name):
         print "unexpected input"
         return
     person = data[name]
-    height = person["height"]
-    weight = person["weight"]
+    height = person["height"] / 100.0
+    weight = person["weight"] 
     return weight / (height * height)
 
 def is_email_addr(addr):
