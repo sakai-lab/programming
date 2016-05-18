@@ -30,6 +30,12 @@ public class AssociativeArray{
 		}
 		System.out.println(map.get("sato").get("height"));
 		System.out.println(map.get("uchimura").get("weight"));
+		bmi("suzuki", map);
+	}
+	public static void bmi(String name, HashMap<String, HashMap<String, Double>> map){
+		Double h = map.get(name).get("height");
+		Double w = map.get(name).get("weight");
+		System.out.println(w/(h*h));
 	}
 }
 
